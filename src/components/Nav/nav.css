@@ -12,3 +12,7 @@
     color: white;
     margin-left: 40px;
 }
+
+.nav a:hover{
+    color: #FF9900;
+}
