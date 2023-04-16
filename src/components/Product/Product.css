@@ -34,6 +34,12 @@
     bottom: 0;
     left: 0;
     padding: 10px;
+    
+}
+
+.btn-cart:hover{
+    background: #FF9900;
+    color: white;
 }
 
 .others{
