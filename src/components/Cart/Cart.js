@@ -4,11 +4,12 @@ import './Cart.css'
 function Cart({cart}) {
     let totalPrice = 0;
     let totalShipping = 0;
+    let quantity = 0;
 
     cart.map(product => {
-        totalPrice = totalPrice + product.price
+        totalPrice = totalPrice + product.price * product.quantity
         totalShipping = totalShipping + product.shipping
-        console.log(totalShipping)
+        quantity = quantity + product.quantity
     })
 
     const tax = totalPrice*7/100
@@ -16,7 +17,7 @@ function Cart({cart}) {
     return (
         <div className='cart'>
             <h3>Order Summary</h3>
-            <h4>Selected items: {cart.length}</h4>
+            <h4>Selected items: {quantity}</h4>
             <p>Total Price: ${totalPrice} </p>
             <p>Total Shipping: ${totalShipping} </p>
             <p>Tax: ${tax.toFixed(2)} </p>
