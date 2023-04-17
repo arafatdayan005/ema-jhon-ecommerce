@@ -1,0 +1,51 @@
+.card-item{
+    width: 570px;
+    border: 1px solid rgb(192, 188, 188);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.card-item img{
+    border-radius: 8px;
+    width: 100px;
+    padding: 0;
+}
+
+.item-details{
+    padding-left: 8px;
+    flex-grow: 1;
+}
+
+.item-details p{
+    margin: 0;
+}
+
+.item-name{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+}
+
+.text-orange{
+    color: #ff9900;
+}
+
+.btn-delete{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(235, 87, 87, 0.3);
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    color: #EB5757;
+    font-size: 25px;
+}

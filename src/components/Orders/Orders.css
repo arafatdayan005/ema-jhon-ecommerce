@@ -1,0 +1,9 @@
+.order-item{
+    margin: 100px auto;
+}
+
+.cart{
+    background: #FFE0B3;
+    position: sticky;
+    top: 0;
+}

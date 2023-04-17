@@ -1,6 +1,7 @@
 .shop{
     display: grid;
     grid-template-columns: 5fr 1fr;
+    height: 100%;
 }
 
 .products{
@@ -8,4 +9,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 70px;
+}
+
+.cart{
+    background: #FFE0B3;
+    padding: 20px;
+    position: sticky;
+    top: 0;
 }

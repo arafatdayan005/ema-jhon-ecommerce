@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Product from '../Product/Product';
 import './Shop.css'
 import Cart from '../Cart/Cart';
-import { addToDb, getShoppingCart } from '../../utilities/fakedb';
+import { addToDb, deleteShoppingCart, getShoppingCart } from '../../utilities/fakedb';
 
 function Shop() {
     const [products, setProducts] = useState([]);
@@ -32,11 +32,11 @@ function Shop() {
     function handleCart(product) {
         let newCart = []
         const exist = cart.find(pd => pd.it == product.id)
-        if(!exist){
+        if (!exist) {
             product.quantity = 1
             newCart = [...cart, product]
         }
-        else{
+        else {
             exist.quantity = exist.quantity + 1;
             const remaining = cart.filter(pd => pd.it !== product.id)
             newCart = [...remaining, exist];
@@ -44,6 +44,11 @@ function Shop() {
         setCart(newCart);
         addToDb(product.id)
     };
+
+    function clearbtn() {
+        setCart([])
+        deleteShoppingCart();
+    }
 
     return (
         <div className='shop'>
@@ -55,7 +60,7 @@ function Shop() {
                 }
             </div>
             <div className="cart">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} clearbtn={clearbtn}></Cart>
             </div>
         </div>
     )
