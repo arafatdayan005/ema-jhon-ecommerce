@@ -9,6 +9,8 @@ import Orders from './components/Orders/Orders';
 import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import AuthProvider from './components/Providers/AuthProvider';
+import Inventory from './components/Inventory/Inventory';
+import PrivateRoute from './routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,13 @@ const router = createBrowserRouter([
         path: '/orders',
         element: <Orders></Orders>,
         loader: () => fetch('products.json')
+      },
+      {
+        path: '/inventory',
+        element:
+          <PrivateRoute>
+            <Inventory></Inventory>
+          </PrivateRoute>
       },
       {
         path: '/login',
