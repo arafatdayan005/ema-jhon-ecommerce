@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Shop from './components/Shop/Shop';
 import Orders from './components/Orders/Orders';
+import Login from './components/Login/Login';
+import Signup from './components/Signup/Signup';
+import AuthProvider from './components/Providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,14 @@ const router = createBrowserRouter([
         path: '/orders',
         element: <Orders></Orders>,
         loader: () => fetch('products.json')
+      },
+      {
+        path: '/login',
+        element: <Login></Login>
+      },
+      {
+        path: '/signup',
+        element: <Signup></Signup>
       }
     ]
   }
@@ -28,7 +39,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <RouterProvider router = {router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </>
 );
 

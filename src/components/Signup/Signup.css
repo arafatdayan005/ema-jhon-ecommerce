@@ -1,0 +1,32 @@
+.signup-container{
+    width: 300px;
+    margin: auto;
+    border: 1px solid grey;
+    padding: 0 2rem;
+    margin-top: 8rem;
+    border-radius: 8px;
+    padding-bottom: 2rem;
+    box-shadow: 0 0 15px 2px #0fb00fac ;
+}
+
+.signup-btn {
+    background-color: rgba(0, 200, 0, 0.3);
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.signup-btn:hover{
+    background-color: rgba(0, 200, 0, 0.6);
+}
+
+.text-login{
+    text-decoration: none;
+    color: orange;
+}

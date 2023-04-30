@@ -16,3 +16,30 @@
 .nav a:hover{
     color: #FF9900;
 }
+
+.btn-LogOut{
+    background: rgb(243, 192, 97);
+    border: none;
+    padding: 5px;
+    margin-left: 20px;
+    color: black;
+    border-radius: 5px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.btn-LogOut:hover{
+    background: rgb(248, 106, 30);
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-mail{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
